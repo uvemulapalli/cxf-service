@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Built-By: v689981
+Build-Jdk: 1.7.0
+Class-Path: lombok-1.16.6.jar jackson-jaxrs-1.9.0.jar jackson-core-asl
+ -1.9.0.jar jackson-mapper-asl-1.9.0.jar spring-web-4.0.5.RELEASE.jar 
+ spring-aop-4.0.5.RELEASE.jar aopalliance-1.0.jar spring-beans-4.0.5.R
+ ELEASE.jar spring-context-4.0.5.RELEASE.jar spring-expression-4.0.5.R
+ ELEASE.jar spring-core-4.0.5.RELEASE.jar wss4j-1.6.10.jar commons-log
+ ging-1.1.1.jar xmlsec-1.5.4.jar opensaml-2.5.1-1.jar openws-1.4.2-1.j
+ ar xmltooling-1.3.2-1.jar slf4j-api-1.6.1.jar joda-time-1.6.2.jar cxf
+ -rt-frontend-jaxrs-2.7.11.jar cxf-api-2.7.11.jar woodstox-core-asl-4.
+ 2.1.jar stax2-api-3.1.4.jar xmlschema-core-2.1.0.jar geronimo-javamai
+ l_1.4_spec-1.7.1.jar wsdl4j-1.6.3.jar cxf-rt-core-2.7.11.jar javax.ws
+ .rs-api-2.0-m10.jar cxf-rt-bindings-xml-2.7.11.jar cxf-rt-transports-
+ http-2.7.11.jar xalan-2.7.1.jar serializer-2.7.1.jar cxf-rt-frontend-
+ jaxws-2.7.11.jar xml-resolver-1.2.jar asm-3.3.1.jar cxf-rt-bindings-s
+ oap-2.7.11.jar cxf-rt-databinding-jaxb-2.7.11.jar cxf-rt-frontend-sim
+ ple-2.7.11.jar cxf-rt-ws-addr-2.7.11.jar cxf-rt-ws-policy-2.7.11.jar 
+ neethi-3.0.3.jar saaj-impl-1.3.18.jar mimepull-1.7.jar jaxb-impl-2.2.
+ 6.jar jaxb-xjc-2.2.6.jar jsr311-api-1.1.1.jar
+Created-By: Maven Integration for Eclipse
+DisableIBMJAXWSEngine: true
+

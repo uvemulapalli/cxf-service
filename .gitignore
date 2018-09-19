@@ -1,0 +1,13 @@
+/*.project
+/.settings
+/WEB-INF/wsdl/*.wsdl
+/cxf-service-ear/*.project
+/cxf-service-ear/.settings
+/cxf-service-ear/target
+/cxf-service-ws/*.classpath
+/cxf-service-ws/*.factorypath
+/cxf-service-ws/*.project
+/cxf-service-ws/.settings
+/cxf-service-ws/target/*
+/cxf-service-ws/src/main/webapp/WEB-INF/wsdl/*
+/cxf-service-ws/src/main/webapp/WEB-INF/wsdl/

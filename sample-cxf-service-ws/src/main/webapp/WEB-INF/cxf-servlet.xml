@@ -1,0 +1,53 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd 
+							http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+							http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+							http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+    
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    
+    <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+    
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+    
+    <jaxws:endpoint id="electronicTuneService" implementor="com.sample.cxf.service.ElectronicTuneService" address="/ElectronicTuneService" serviceName="tns:ElectronicTuneService" xmlns:tns="http://electronic.tune.web.service.com/">
+    	<jaxws:features>
+            <bean class="org.apache.cxf.feature.LoggingFeature" />
+        </jaxws:features>
+    </jaxws:endpoint>
+    
+	<jaxrs:server id="electronicTuneServiceRest" address="/api/v1">
+		<jaxrs:serviceBeans>
+			<ref bean="electronicTuneOrderService" />
+		</jaxrs:serviceBeans>
+		<!-- <jaxrs:providers>
+		    <ref bean="jaxbProvider"/>
+		    <ref bean="jsonProvider"/>
+		</jaxrs:providers> -->
+	</jaxrs:server>
+    
+    <bean id="electronicTuneOrderService" class="com.sample.cxf.service.ElectronicTuneService"/>
+    
+    <!-- <bean id="depthProperties" class="org.apache.cxf.staxutils.DocumentDepthProperties">
+		<property name="innerElementCountThreshold" value="500"/>
+	</bean> 
+	 
+	<bean id="jaxbProvider" class="org.apache.cxf.jaxrs.provider.JAXBElementProvider">
+		<property name="marshallerProperties" ref="propertiesMap"/>
+		<property name="depthProperties" ref="depthProperties"/>
+	</bean> 
+	 
+	<bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider">
+		<property name="depthProperties" ref="depthProperties"/>
+	</bean>
+    
+    <util:map id="propertiesMap">
+		<entry key="jaxb.formatted.output">
+		   <value type="java.lang.Boolean">true</value>
+		</entry>
+	</util:map> -->
+    
+    <!-- <jaxrs:providers>
+		<bean id="jacksonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+	</jaxrs:providers> -->
+</beans>
